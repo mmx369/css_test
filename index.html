@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0 auto;
+        }
+        
+        .topLeft {
+            position: absolute;
+            animation: greenBorder 4s infinite;
+            top: 5px;
+            left: 5px;
+            border-top-left-radius: 20px;
+            border-top: 15px solid white;
+            border-left: 15px solid white;
+            width: 30px;
+            height: 30px;
+        }
+        
+        .topRight {
+            position: absolute;
+            animation: greenBorder 4s infinite;
+            border-top-right-radius: 20px;
+            border-top: 15px solid white;
+            border-right: 15px solid white;
+            top: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+        }
+        
+        .bottomLeft {
+            border-bottom: 15px solid white;
+            animation: blueBorder 4s infinite;
+            border-left: 15px solid white;
+            border-bottom-left-radius: 20px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            width: 30px;
+            height: 30px;
+        }
+        
+        .bottomRight {
+            position: absolute;
+            animation: blueBorder 4s infinite;
+            border-bottom: 15px solid white;
+            border-right: 15px solid white;
+            border-bottom-right-radius: 20px;
+            bottom: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+        }
+        
+        .slideInLeft {
+            animation: slideInLeft 1s ease-in;
+            /* animation-name: slideInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none; */
+            /* transform: translateX(-150px); */
+        }
+        
+        .frame {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: transparent;
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            /* animation: slideInleft 1s ease-in;
+            height: 250px;
+            width: 250px;
+            background-color: aqua;
+            position: relative;
+            background: transparent; */
+        }
+        
+        div.slide-slow {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        div.slide-slow div.inner {
+            animation: slide-slow 4s infinite;
+        }
+        
+        @keyframes slide-slow {
+            0% {
+                transform: translateX(-100%);
+            }
+            5% {
+                transform: translate(0);
+            }
+            80% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        @keyframes greenBorder {
+            0% {
+                border-color: white;
+            }
+            100% {
+                border-color: #34c759;
+            }
+        }
+        
+        @keyframes blueBorder {
+            0% {
+                border-color: white;
+            }
+            100% {
+                border-color: rgb(112, 154, 213)
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height:100%; background-color:bisque; display: flex; justify-content: center; align-items: center;">
+        <div class="slide-slow">
+            <div class="inner">
+                <div style="width:250px; height: 250px; background-color: transparent; position: relative;">
+                    <div class="topLeft"></div>
+                    <div class="topRight"></div>
+                    <div class="bottomLeft"></div>
+                    <div class="bottomRight"></div>
+                </div>
+            </div>
+
+</body>
+
+</html>
